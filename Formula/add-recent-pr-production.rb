@@ -6,9 +6,9 @@ class AddRecentPrProduction < Formula
   version "0.1.0"
   license :cannot_represent
 
-  url "https://github.com/finally-studio/homebrew-tap/releases/download/add-recent-pr-production-v0.1.0/add-recent-pr-production-v0.1.0.tar.gz",
+  url "https://github.com/finally-studio/add-recent-pr-production/releases/download/v0.1.0/add-recent-pr-production.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "b07d9ab5d2b731d403ff39dbef671c0eb4826da0c5f594f3830b507e0a55c202"
+  sha256 "3cc726a234ebdb064aad0df3cbb8fc97231fa145f6fce53c0b750a5c82959e46"
 
   def install
     bin.install "add-recent-pr-production"
