@@ -10,11 +10,23 @@ class Faulancer < Formula
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "697d3ebd85df6bef952c7557f512a7d26d98c872d97192d2f4565e661a0316fc"
 
+  depends_on "python@3.13"
   depends_on :macos
 
   def install
+    python3 = Formula["python@3.13"].opt_bin/"python3.13"
+    system python3, "-m", "venv", libexec/"venv"
+    venv_pip = libexec/"venv/bin/pip"
+    system venv_pip, "install", "--quiet", "--upgrade", "pip"
+    system venv_pip, "install", "--quiet", "-r", "requirements.txt"
+
     libexec.install Dir["*"]
-    bin.install_symlink libexec/"faulancer"
+
+    (bin/"faulancer").write <<~SH
+      #!/bin/bash
+      exec "#{libexec}/venv/bin/python" "#{libexec}/faulancer.py" "$@"
+    SH
+    chmod 0755, bin/"faulancer"
   end
 
   test do
