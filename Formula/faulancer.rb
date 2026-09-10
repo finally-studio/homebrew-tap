@@ -3,12 +3,12 @@ require_relative "../lib/private_strategy"
 class Faulancer < Formula
   desc "Notion databases to Premiere Pro timelines (JSX generation)"
   homepage "https://github.com/finally-studio/faulancer"
-  version "0.1.2"
+  version "0.1.3"
   license :cannot_represent
 
-  url "https://github.com/finally-studio/faulancer/releases/download/v0.1.2/faulancer.tar.gz",
+  url "https://github.com/finally-studio/faulancer/releases/download/v0.1.3/faulancer.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "c86b6c22805223f2d6f67a1e6d289ab089da912e689f2d1fd60502925af74148"
+  sha256 "ab9ea424e5bbffa89cabbcb669d04bb932d3e63c6736d2b19bc7b9527f0db5ea"
 
   depends_on "python@3.13"
   depends_on :macos
