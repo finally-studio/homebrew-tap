@@ -3,12 +3,12 @@ require_relative "../lib/private_strategy"
 class Convert2magic < Formula
   desc "Modern Python video conversion tool with professional FFmpeg presets"
   homepage "https://github.com/finally-studio/convert2magic"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
-  url "https://github.com/finally-studio/convert2magic/releases/download/v1.3.1/convert2magic.tar.gz",
+  url "https://github.com/finally-studio/convert2magic/releases/download/v1.3.2/convert2magic.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "f394297ba134372c5a58c6abf71334a7f480920f49a56a3240393d63055faf5d"
+  sha256 "1d2bac56be15cd9a86f8d52b486a3403f25ad0e594b614b88eead9f2b340a210"
 
   depends_on "python@3.11"
   depends_on "ffmpeg"
@@ -17,7 +17,7 @@ class Convert2magic < Formula
     python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     # Install source files to libexec directory
-    libexec.install Dir["src/*"]
+    libexec.install Dir["*"]
 
     # Install Python dependencies using the pinned interpreter's pip
     system python3, "-m", "pip", "install", "--target=#{libexec}/lib", "click>=8.0.0", "PyYAML>=6.0"
