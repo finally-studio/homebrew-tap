@@ -1,21 +1,22 @@
 require_relative "../lib/private_strategy"
 
 class Low2high < Formula
-  include Language::Python::Virtualenv
-
   desc "Convert low-resolution images to high-resolution using Getty Images and other stock photo services"
   homepage "https://github.com/finally-studio/low2high"
-  version "2.3.1"
+  version "2.3.2"
   license "MIT"
 
-  url "https://github.com/finally-studio/low2high/releases/download/v2.3.1/low2high.tar.gz",
+  url "https://github.com/finally-studio/low2high/releases/download/v2.3.2/low2high.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "3b9785f10cb47a57ce7cabae70886dd384a9f7da9835212b10e5c3abb32f9b15"
+  sha256 "86ad8134fc813a4376ee7e22a50b074a0a01958ad90fd9b84e89c1b4c6fa0f4e"
 
   depends_on "python@3.11"
 
   def install
-    virtualenv_install_with_resources
+    system "python3.11", "-m", "venv", libexec
+    system "#{libexec}/bin/pip", "install", "--upgrade", "pip"
+    system "#{libexec}/bin/pip", "install", buildpath
+    bin.install_symlink libexec/"bin/low2high"
   end
 
   test do
