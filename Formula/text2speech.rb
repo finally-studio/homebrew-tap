@@ -136,6 +136,12 @@ class Text2speech < Formula
   end
 
   def install
+    # Works around a macOS 27 dyld regression: Rust's default release-profile
+    # symbol stripping leaves the Mach-O string table 4-byte aligned, but
+    # macOS 27's dyld requires 8-byte alignment and refuses to dlopen the
+    # result ("mis-aligned LINKEDIT string pool"). Hits pydantic-core's
+    # compiled extension specifically. Upstream: rust-lang/rust#157750.
+    ENV.append "RUSTFLAGS", "-C strip=none"
     virtualenv_install_with_resources
   end
 
