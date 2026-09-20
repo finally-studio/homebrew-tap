@@ -5,12 +5,12 @@ class Getfinder < Formula
 
   desc "Get Finder selection and current directory from command line"
   homepage "https://github.com/finally-studio/getfinder"
-  version "2025.2.1"
+  version "2025.2.2"
   license "MIT"
 
-  url "https://github.com/finally-studio/getfinder/releases/download/2025.2.1/getfinder.tar.gz",
+  url "https://github.com/finally-studio/getfinder/releases/download/2025.2.2/getfinder.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "fbd3ade57b626d7cb99ec85b33f961c195bc4bd33cec8d31b8ff82e630d14e85"
+  sha256 "d3ce4836f024f538e23719ed350c723a090fd4e4c9bb1f78fe41a7f63d38dde6"
 
   depends_on "python@3.13"
 
