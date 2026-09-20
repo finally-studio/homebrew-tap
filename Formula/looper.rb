@@ -3,17 +3,17 @@ require_relative "../lib/private_strategy"
 class Looper < Formula
   desc "Flexible batch file processor with dynamic placeholders for command templates"
   homepage "https://github.com/finally-studio/looper"
-  version "1.3.9"
+  version "1.3.10"
   license "MIT"
 
-  url "https://github.com/finally-studio/looper/releases/download/v1.3.9/looper.tar.gz",
+  url "https://github.com/finally-studio/looper/releases/download/v1.3.10/looper.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "31436d022fa6e1544f39026257c0819b7935f2794efeecaca117c31717a2d611"
+  sha256 "66c4a0d3b55d095ce4f2b642cad8e2dbf6a11d37f5d87d7fb9a815f401e71136"
 
   depends_on "python@3.11"
 
   def install
-    bin.install "bin/looper"
+    bin.install "looper"
   end
 
   def caveats
