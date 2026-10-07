@@ -3,12 +3,12 @@ require_relative "../lib/private_strategy"
 class Low2high < Formula
   desc "Convert low-resolution images to high-resolution using Getty Images and other stock photo services"
   homepage "https://github.com/finally-studio/low2high"
-  version "2.3.2"
+  version "2.4.0"
   license "MIT"
 
-  url "https://github.com/finally-studio/low2high/releases/download/v2.3.2/low2high.tar.gz",
+  url "https://github.com/finally-studio/low2high/releases/download/v2.4.0/low2high.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "86ad8134fc813a4376ee7e22a50b074a0a01958ad90fd9b84e89c1b4c6fa0f4e"
+  sha256 "bb5e397e2e6945d38fe3c0959aa3d956d7c3e26caffd08fff80c7595aaadb49d"
 
   depends_on "python@3.11"
 
