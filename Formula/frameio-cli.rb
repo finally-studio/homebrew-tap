@@ -1,14 +1,14 @@
 require_relative "../lib/private_strategy"
 
 class FrameioCli < Formula
-  desc "CLI tool for uploading files to Frame.io"
+  desc "CLI tool for uploading files to and downloading share links from Frame.io"
   homepage "https://github.com/finally-studio/frameio-cli"
-  version "0.4.12"
+  version "0.5.0"
   license "MIT"
 
-  url "https://github.com/finally-studio/frameio-cli/releases/download/v0.4.12/frameio-cli.tar.gz",
+  url "https://github.com/finally-studio/frameio-cli/releases/download/v0.5.0/frameio-cli.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "c6d6cc32bf8488e0c4f8e5dff6bf3f8a2375fe112f94bcb9861e4e849e15c10f"
+  sha256 "309630a98dcfc1b11e3d4bcd6b3ab3f8d669534f417243eee4ec439da9e38bb0"
 
   depends_on "python@3.13"
 
