@@ -5,12 +5,12 @@ class Text2speech < Formula
 
   desc "Convert text to speech using multiple providers like ElevenLabs and Gemini"
   homepage "https://github.com/finally-studio/text2speech"
-  version "1.1.1"
+  version "1.2.0"
   license "MIT"
 
-  url "https://github.com/finally-studio/text2speech/releases/download/v1.1.1/text2speech.tar.gz",
+  url "https://github.com/finally-studio/text2speech/releases/download/v1.2.0/text2speech.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "e874d9bab4b2c8e0d410f815a63ef34110d0d956e3e731f9b294d77de6863097"
+  sha256 "7609b70b2fe452bc042147fe10f3051325f9f24fbeca15c9487230f5d2128bf8"
 
   depends_on "python@3.13"
   depends_on "rust" => :build
