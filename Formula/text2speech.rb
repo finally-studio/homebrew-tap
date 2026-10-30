@@ -12,6 +12,13 @@ class Text2speech < Formula
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "7609b70b2fe452bc042147fe10f3051325f9f24fbeca15c9487230f5d2128bf8"
 
+  bottle do
+    root_url "https://github.com/finally-studio/text2speech/releases/download/v1.2.0",
+             using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "cf70adc264ff905407b49e614eaeee4ce6dbdd88e293913a0517419eedbb5546"
+  end
+
   depends_on "python@3.13"
   depends_on "rust" => :build
 
