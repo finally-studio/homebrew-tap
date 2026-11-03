@@ -5,12 +5,12 @@ class Transpath < Formula
 
   desc "Simple file path translator between storage locations"
   homepage "https://github.com/finally-studio/transpath"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
-  url "https://github.com/finally-studio/transpath/releases/download/v1.1.0/transpath.tar.gz",
+  url "https://github.com/finally-studio/transpath/releases/download/v1.1.1/transpath.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "501f05f9c69e9eeac7c6bece401ce22bb58b658f4f1105ed3127503430d473dc"
+  sha256 "d5f74620e2fab2d02c7d26caca1e7236b2b6711d308019958df89e4933d282a2"
 
   depends_on "python@3.11"
 
