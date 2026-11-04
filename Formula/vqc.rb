@@ -3,12 +3,12 @@ require_relative "../lib/private_strategy"
 class Vqc < Formula
   desc "Video Quality Control for post-production cleanfeeds"
   homepage "https://github.com/finally-studio/vqc"
-  version "0.3.2"
+  version "0.4.0"
   license "MIT"
 
-  url "https://github.com/finally-studio/vqc/releases/download/v0.3.2/vqc.tar.gz",
+  url "https://github.com/finally-studio/vqc/releases/download/v0.4.0/vqc.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "a7443039b78d607892d7149964b3130836bc90bf6999ce0a46df4617b40c8668"
+  sha256 "35db75be93e0386509aa472a4480909549830b3575166704f4e0165e358aed10"
 
   depends_on "python@3.13"
 
