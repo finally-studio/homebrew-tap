@@ -2,7 +2,7 @@
 
 ```bash
 brew tap finally-studio/tap
-brew install finally-studio/tap/add-recent-pr-production
+brew install finally-studio/tap/homesync
 ```
 
 Release workflow (adding a tool, cutting a new version, migrating from the old
