@@ -7,12 +7,15 @@ class Putzfimmel < Formula
   homepage "https://github.com/finally-studio/putzfimmel"
   version "0.1.0"
   license "MIT"
+  revision 1
 
   url "https://github.com/finally-studio/putzfimmel/releases/download/v0.1.0/putzfimmel.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "944c3b3dfac336b7e2bcd10a2912b198c44bad8ae9f4929ae6e478553f9dbe9c"
 
   depends_on "ffmpeg"
+  depends_on "gpac" # MP4Box: `inspect` reads the mp4 colr atom with it
+  depends_on "mediainfo" # `inspect` dumps the real VUI with it
   depends_on "python@3.13"
   depends_on "zstd"
 
