@@ -5,12 +5,12 @@ class Putzfimmel < Formula
 
   desc "Tidy up project folders: pack, unpack, sweep and convert footage"
   homepage "https://github.com/finally-studio/putzfimmel"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
-  url "https://github.com/finally-studio/putzfimmel/releases/download/v0.1.1/putzfimmel.tar.gz",
+  url "https://github.com/finally-studio/putzfimmel/releases/download/v0.1.2/putzfimmel.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "d67b0ca1a922ce645fd3e1f749c51c5cc7c63db1ba3921fa139ff6bb6bdc0606"
+  sha256 "b7738e7a1d7920f8dbe8f3244086eceeaa7b73ed427bd07fbb3feaa9ccf4ff39"
 
   depends_on "ffmpeg"
   depends_on "gpac" # MP4Box: `inspect` reads the mp4 colr atom with it
