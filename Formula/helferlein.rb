@@ -3,12 +3,12 @@ require_relative "../lib/private_strategy"
 class Helferlein < Formula
   desc "Modular macOS admin tools for Munki, network mounts, and user management"
   homepage "https://github.com/finally-studio/helferlein"
-  version "1.7.2"
+  version "1.8.0"
   license "MIT"
 
-  url "https://github.com/finally-studio/helferlein/releases/download/v1.7.2/helferlein.tar.gz",
+  url "https://github.com/finally-studio/helferlein/releases/download/v1.8.0/helferlein.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "b57ccc9f1dc3f103f39ee28fb4f8293bd12ea5fb498ef42f09cd1f5337883070"
+  sha256 "8215d3349af86c1c12d8adecd578c1ab15a2e00c841e6bcb3006053bd6a47d00"
 
   def install
     # Install the main script and all modules to libexec
@@ -53,14 +53,13 @@ class Helferlein < Formula
 
       Configuration:
         Edit #{opt_libexec}/config/config.conf with your settings:
-        • SERVIERER_IP: Your server IP address
-        • PRODUCTION_MOUNT_PATH: Local mount point for production share
-        • MUNKI_REPO_MOUNT_PATH: Local mount point for Munki repository
+        • MIN_USER_ID: Lowest user ID treated as a regular user
         • PROTECTED_USER: User to protect from mass logout operations
 
       Available command categories:
-        • Munki Management: munki update, munki repo-clean, etc.
-        • Network Mounts: mountshare/unmountshare for SMB shares
+        • Munki Management: munki update, munki repoclean, etc.
+        • App Tools: app requirement, app bundleid
+        • Cleanup: clean dotfiles, clean dsstore, clean whitespace
         • User Management: user bootout, user list, user apps, etc.
         • Media Tools: media fixtime, media validate, media duration
         • Background Jobs: bgrun for long-running tasks, bgjobs to monitor
@@ -69,7 +68,6 @@ class Helferlein < Formula
       Usage examples:
         helferlein help                    # Show all commands
         munki update                       # Update Munki packages
-        mountshare all                     # Mount configured network shares
         user bootout all                   # Boot out users (protects configured user)
         user apps florian                  # List running apps for user florian
         media duration ~/Videos            # Calculate total video duration
@@ -89,7 +87,6 @@ class Helferlein < Formula
     # Test that individual commands are available after sourcing
     system "bash", "-c", "source #{libexec}/helferlein.sh && type munki"
     system "bash", "-c", "source #{libexec}/helferlein.sh && type bgrun"
-    system "bash", "-c", "source #{libexec}/helferlein.sh && type mountshare"
     system "bash", "-c", "source #{libexec}/helferlein.sh && type hgrep"
     system "bash", "-c", "source #{libexec}/helferlein.sh && type media"
 
