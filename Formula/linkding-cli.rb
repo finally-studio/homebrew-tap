@@ -5,11 +5,11 @@ class LinkdingCli < Formula
 
   desc "macOS client for the linkding symlink management server"
   homepage "https://github.com/finally-studio/linkding-cli"
-  version "1.0.1"
+  version "1.0.2"
 
-  url "https://github.com/finally-studio/linkding-cli/releases/download/v1.0.1/linkding-cli.tar.gz",
+  url "https://github.com/finally-studio/linkding-cli/releases/download/v1.0.2/linkding-cli.tar.gz",
       using: GitHubPrivateRepositoryReleaseDownloadStrategy
-  sha256 "d29538d99110a6825c6799aa3f048a34fd1171cce0101dc8bbe1066dd79727bb"
+  sha256 "de51ee2f535c58879a0556a1906f8191777a8165d07ee8112d9b9a5e75e81b44"
 
   depends_on "finally-studio/tap/transpath"
   depends_on "python@3.11"
